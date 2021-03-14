@@ -158,14 +158,14 @@
 				</div>
 			</transition>
 
-			<main class="flex flex-col md:flex-row flex-1  border-l w-96">
-				<button class="text-center font-semibold text-gray-600 border hover:bg-gray-200 p-2" @click="slideY = !slideY">
+			<main class="flex flex-col lg:flex-row flex-1  border-l w-96">
+				<button class="text-center font-semibold text-gray-600 border hover:bg-gray-200 p-2" @click="slideY = !slideY" v-if="!isLg">
 					<div class="flex justify-between">
 						<div class="flex gap-x-5">
 							<svg v-if="slideY" class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
 							</svg>
-							<svg v-else class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<svg v-else class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</div>
@@ -174,117 +174,89 @@
 							<svg v-if="slideY" class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
 							</svg>
-							<svg v-else class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<svg v-else class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</div>
 					</div>
 				</button>
 
-				<transition name="slide-vertical">
-					<div class="flex flex-col flex-shrink-0 border-r z-20" v-if="slideY">
-						<div class="flex items-center justify-between p-2 text-xs text-gray-400 font-semibold">
-							<div class="flex items-center">
-								Sort by Date
-								<span>
-									<svg class="w-4 h-4 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-										<path
-											fill-rule="evenodd"
-											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-								</span>
+				<div class="overflow-y-hidden flex-shrink-0 ">
+					<transition name="slide-vertical">
+						<div class="flex flex-col flex-shrink-0 border-r z-20" v-if="slideY">
+							<div class="flex items-center justify-between p-2 text-xs text-gray-400 font-semibold">
+								<div class="flex items-center">
+									Sort by Date
+									<span>
+										<svg class="w-4 h-4 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+											<path
+												fill-rule="evenodd"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+									</span>
+								</div>
+								<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+								</svg>
 							</div>
-							<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
-							</svg>
+							<!-- Cards go here -->
+							<div class="flex-grow flex flex-col overflow-y-auto divide-y divide-gray-100">
+								<button>
+									<div class="w-full md:w-72 bg-blue-50 flex flex-col text-left p-4 gap-y-1 border-l-4 border-blue-400 rounded">
+										<div class="flex justify-between items-center">
+											<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
+											<div class="text-gray-400 text-xs">1 day ago</div>
+										</div>
+										<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
+										<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+									</div>
+								</button>
+								<button>
+									<div class="w-full md:w-72 bg-white hover:bg-blue-50 flex flex-col text-left p-4 gap-y-1">
+										<div class="flex justify-between items-center">
+											<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
+											<div class="text-gray-400 text-xs">1 day ago</div>
+										</div>
+										<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
+										<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+									</div>
+								</button>
+								<button>
+									<div class="w-full md:w-72 bg-white hover:bg-blue-50 flex flex-col text-left p-4 gap-y-1">
+										<div class="flex justify-between items-center">
+											<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
+											<div class="text-gray-400 text-xs">1 day ago</div>
+										</div>
+										<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
+										<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+									</div>
+								</button>
+								<button>
+									<div class="w-full md:w-72 bg-white hover:bg-blue-50 flex flex-col text-left p-4 gap-y-1">
+										<div class="flex justify-between items-center">
+											<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
+											<div class="text-gray-400 text-xs">1 day ago</div>
+										</div>
+										<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
+										<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+									</div>
+								</button>
+								<button>
+									<div class="w-full md:w-72 bg-white hover:bg-blue-50 flex flex-col text-left p-4 gap-y-1">
+										<div class="flex justify-between items-center">
+											<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
+											<div class="text-gray-400 text-xs">1 day ago</div>
+										</div>
+										<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
+										<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+									</div>
+								</button>
+							</div>
 						</div>
-						<!-- Cards go here -->
-						<div class="flex-grow flex flex-col overflow-y-auto divide-y divide-gray-100">
-							<div class="w-full md:w-72 bg-blue-50 flex flex-col text-left p-4 gap-y-1 border-l-4 border-blue-400 rounded">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-								<div class="flex justify-between items-center">
-									<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-									<div class="text-gray-400 text-xs">1 day ago</div>
-								</div>
-								<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-								<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-							</div>
-							<!-- <div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-							<div class="flex justify-between items-center">
-								<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-								<div class="text-gray-400 text-xs">1 day ago</div>
-							</div>
-							<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-							<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-						</div>
-						<div class="w-full md:w-72 bg-white flex flex-col text-left p-4 gap-y-1">
-							<div class="flex justify-between items-center">
-								<div class="text-sm text-gray-800 font-semibold">Joe Armstrong</div>
-								<div class="text-gray-400 text-xs">1 day ago</div>
-							</div>
-							<div class="text-sm font-semibold text-gray-500">Re: Student Discount?</div>
-							<p class="text-sm text-gray-400 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-						</div> -->
-						</div>
-					</div>
-				</transition>
+					</transition>
+				</div>
 
 				<div class="flex-1 divide-y flex flex-col flex-shrink-0">
 					<!-- Header -->
@@ -445,17 +417,27 @@ export default {
 		return {
 			windowWidth: window.innerWidth,
 			slide: false,
-			slideY: false,
+			slideY: true,
 		};
 	},
 	mounted() {
 		window.addEventListener('resize', () => {
 			this.windowWidth = window.innerWidth;
 		});
+		if (this.isLg) {
+			this.slide = true;
+			this.slideY = true;
+		} else {
+			this.slide = false;
+			this.slideY = false;
+		}
 	},
 	watch: {
 		isLg(val, oldVal) {
-			if (val !== oldVal) this.slide = !this.slide;
+			if (val !== oldVal) {
+				this.slide = !this.slide;
+				this.slideY = !this.slideY;
+			}
 		},
 	},
 };
