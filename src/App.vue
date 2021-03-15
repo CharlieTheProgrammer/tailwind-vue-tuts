@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-gray-100 h-screen flex flex-wrap">
+	<div class="bg-gray-100 h-screen flex flex-wrap" style="min-width: 735px">
 		<!-- <div class="bg-blue-100 w-screen h-56">menu</div> -->
 
 		<!-- <div class="h-full w-full flex flex-row"> -->
@@ -170,61 +170,66 @@
 						</div>
 					</div>
 				</div>
+				<!-- Playbar -->
 				<div class="flex items-center justify-center">
 					<div class="bg-gray-100 flex items-center rounded-full border border-gray-300 px-5 py-1">
 						<!-- Buttons -->
 						<div class="flex items-center gap-x-2">
-							<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
-								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"
-									/>
-								</svg>
-							</button>
-							<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
-								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-									/>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
-							</button>
-							<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
-								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"
-									/>
-								</svg>
-							</button>
-							<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
-								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-									/>
-								</svg>
-							</button>
-							<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
-								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-									/>
-								</svg>
-							</button>
+							<div class="hidden lg:block">
+								<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
+									<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"
+										/>
+									</svg>
+								</button>
+								<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
+									<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+										/>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+									</svg>
+								</button>
+								<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
+									<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="hidden lg:block">
+								<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
+									<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+										/>
+									</svg>
+								</button>
+								<button class="text-gray-600 hover:bg-gray-200 rounded p-1">
+									<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+										/>
+									</svg>
+								</button>
+							</div>
 						</div>
 						<!-- Timer -->
 						<span class="mb-1 mx-4 inline-block text-gray-300 font-semibold text-4xl">0:00:00<span class=" text-xl text-gray-600">.00</span></span>
@@ -253,7 +258,9 @@
 									d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
 								/>
 							</svg>
-							Share
+							<div class="hidden lg:block">
+								Share
+							</div>
 						</button>
 					</div>
 					<div class="border-r -my-1 border-gray-300"></div>
@@ -274,10 +281,10 @@
 				</div>
 			</nav>
 
-			<main class="bg-white flex-1 rounded-lg overflow-hidden border shadow-md -mx-0.5 p-4">
-				<div class="flex justify-between items-center">
+			<main class="bg-white flex-1 flex flex-col items-center  justify-start rounded-lg overflow-hidden border shadow-md -mx-0.5 pt-4 xl:p-4">
+				<!-- Instrument Cluster -->
+				<div class="flex w-full justify-between items-center">
 					<div></div>
-					<!-- Instrument Cluster -->
 					<div class="flex justify-center gap-x-1">
 						<div class="flex items-center">
 							<button class="flex items-center hover:bg-gray-100 text-gray-600 rounded">
@@ -432,9 +439,72 @@
 						</div>
 					</div>
 					<div class="text-right">
-						<button class="text-sm text-gray-600 font-semibold hover:bg-gray-100 rounded py-1 px-3">
+						<button class="text-sm text-gray-600 font-semibold hover:bg-gray-100 rounded py-1 px-3 mr-2">
 							Publish
 						</button>
+					</div>
+				</div>
+
+				<!-- Content -->
+				<div class="flex flex-wrap justify-center w-full overflow-hidden pt-16 xl:p-16 max-w-6xl">
+					<!-- <header class="flex flex-wrap overflow-hidden"> -->
+					<div class="w-1/6 overflow-hidden ">
+						<!-- Filler -->
+					</div>
+
+					<div class="w-5/6 lg:w-4/6 overflow-hidden text-2xl py-8 pl-1 pr-10 lg:pr-0">
+						<!-- Column Content -->
+						The Portal - 12 - Vitalik Buterin - The Ethereal Prince and His Virtual Machine-Cut
+					</div>
+					<div class="hidden lg:block w-1/6 overflow-hidden ">
+						<!-- Filler -->
+					</div>
+					<!-- </header> -->
+
+					<div class="w-1/6 overflow-hidden text-center flex justify-end items-start mb-6">
+						<button class="flex items-center justify-center gap-x-1 hover:bg-gray-200 text-transparent hover:text-gray-400 rounded px-1 py-1 mr-2">
+							<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+							<div class="text-indigo-500 text-sm font-semibold">
+								Eric Weinstein
+							</div>
+							<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="w-5/6 lg:w-4/6 overflow-hidden leading-8 tracking-wide mb-6 flex flex-wrap pr-10 lg:pr-0">
+						<div class=" hover:bg-gray-100 rounded pl-1" v-for="(word, index) in phraseToArray(ericFirstLine)" :key="index">
+							{{ word }}
+						</div>
+					</div>
+					<div class="hidden lg:block w-1/6 overflow-hidden ">
+						<!-- Filler -->
+					</div>
+
+					<div class="w-1/6 overflow-hidden text-center flex justify-end items-start mb-6">
+						<button class="flex items-center justify-center gap-x-1 hover:bg-gray-200 text-transparent hover:text-gray-400 rounded px-1 py-1 mr-2">
+							<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+							<div class="text-pink-500 text-sm font-semibold">
+								Vitalik Buterin
+							</div>
+							<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="w-5/6 lg:w-4/6 overflow-hidden leading-8 tracking-wide mb-6 flex flex-wrap pr-10 lg:pr-0">
+						<div class=" hover:bg-gray-100 rounded pl-1" v-for="(word, index) in phraseToArray(vitalikFirstLine)" :key="index">
+							{{ word }}
+						</div>
+					</div>
+					<div class="hidden lg:block w-1/6 overflow-hidden ">
+						<!-- Filler -->
 					</div>
 				</div>
 			</main>
@@ -475,9 +545,16 @@ export default {
 	data() {
 		return {
 			showDropdown1: false,
+			ericFirstLine: `Hello, you found the portal. I'm your host, Eric Weinstein. And I'm sitting here today with metallic Buter and the leader and a founder of the Ethereum world of cryptocurrencies and smart contracts. Welcome to the portal.`,
+			vitalikFirstLine: `Thank you. It's good to be here, Eric.`,
 		};
 	},
-	mounted() {},
+	methods: {
+		phraseToArray(phrase) {
+			return phrase.split(' ');
+		},
+	},
+	mounted() {	},
 	watch: {},
 };
 </script>
