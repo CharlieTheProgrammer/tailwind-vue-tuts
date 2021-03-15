@@ -1,5 +1,5 @@
 <template>
-	<div id="app" class="bg-gray-100 h-screen flex flex-col z-30">
+	<div class="bg-gray-100 h-screen flex flex-col z-30">
 		<header class="flex flex-shrink-0">
 			<transition name="slide-horizontal">
 				<div class="bg-gray-800 flex-shrink-0 w-64 px-4 py-3" v-if="slide">
