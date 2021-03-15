@@ -3,12 +3,55 @@
 		<!-- <div class="bg-blue-100 w-screen h-56">menu</div> -->
 
 		<!-- <div class="h-full w-full flex flex-row"> -->
-		<div class="w-14">hello</div>
+		<div class="w-14 flex flex-row items-start justify-center px-2 pt-5">
+			<div class="flex flex-col gap-y-1">
+				<button class="hover:bg-gray-200 rounded p-1 mb-5">
+					<svg class="h-6 w-6 text-blue-500 stroke-current fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<title>Dash icon</title>
+						<path
+							d="M3.21 9.967C.922 9.967.595 11.457.38 12.36.093 13.538 0 14.02 0 14.02h8.947c2.29 0 2.617-1.492 2.832-2.394.285-1.178.379-1.66.379-1.66zM15.72 2.26H6.982L6.26 6.307l7.884.01c3.885 0 5.03 1.41 4.997 3.748-.019 1.196-.537 3.225-.762 3.884-.598 1.753-1.827 3.749-6.435 3.744l-7.666-.004-.725 4.052h8.718c3.075 0 4.38-.36 5.767-.995 3.071-1.426 4.9-4.455 5.633-8.41C24.76 6.448 23.403 2.26 15.72 2.26z"
+						></path>
+					</svg>
+				</button>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+				<div class="border-t border-gray-200 -mx-3"></div>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+					</svg>
+				</button>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
+						/>
+					</svg>
+				</button>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+						/>
+					</svg>
+				</button>
+			</div>
+		</div>
 		<div class="bg-gray-100 flex-1 flex flex-col">
 			<!-- Having some difficulty adding the small border on the right -->
-			<!-- <div class="border-l-4 -my-2 border-red-700"></div> -->
-			<nav class="flex items-center justify-between px-4 py-2">
+			<nav class="flex items-center justify-between px-2.5 py-2">
+				<!-- self-stretch will prevent empty div from collapsing due to flex items-center  -->
 				<div class="flex items-center">
+					<div class="border-r -my-1 self-stretch border-gray-300 mr-2"></div>
 					<div class="text-sm font-semibold text-gray-600 px-3 py-1 hover:bg-gray-200 rounded">
 						Portal
 					</div>
@@ -213,9 +256,9 @@
 							Share
 						</button>
 					</div>
-					<div class="border-r -my-2 border-gray-300"></div>
+					<div class="border-r -my-1 border-gray-300"></div>
 					<div class="flex items-center">
-						<button class="flex items-center mx-2 hover:bg-gray-200 text-gray-400 rounded px-1 py-1">
+						<button class="flex items-center ml-2 hover:bg-gray-200 text-gray-400 rounded px-1 py-1">
 							<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 							</svg>
@@ -231,15 +274,195 @@
 				</div>
 			</nav>
 
-			<main class="bg-white flex-1 rounded-lg overflow-hidden shadow-md -mx-5 p-4">
-				hello
-			</main>
+			<main class="bg-white flex-1 rounded-lg overflow-hidden border shadow-md -mx-0.5 p-4">
+				<div class="flex justify-between items-center">
+					<div></div>
+					<!-- Instrument Cluster -->
+					<div class="flex justify-center gap-x-1">
+						<div class="flex items-center">
+							<button class="flex items-center hover:bg-gray-100 text-gray-600 rounded">
+								<svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+								</svg>
+								<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</div>
+						<div class="border-r border-gray-200"></div>
+						<div class="flex items-center">
+							<button class="flex items-center hover:bg-gray-100 text-gray-600 rounded px-1 py-1">
+								<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+									/>
+								</svg>
+								<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</div>
+						<div class="border-r border-gray-200"></div>
 
+						<!-- Middle cluster -->
+						<div class="flex gap-x-1">
+							<div class="flex items-center">
+								<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+									<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+										/>
+									</svg>
+									<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										<path
+											fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="flex items-center">
+								<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+									<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+										/>
+									</svg>
+									<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										<path
+											fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="flex items-center">
+								<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+									<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+										/>
+									</svg>
+									<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										<path
+											fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="flex items-center">
+								<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+									<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+									</svg>
+									<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										<path
+											fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="border-r border-gray-200"></div>
+						<div class="flex items-center">
+							<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+								<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+									/>
+								</svg>
+								<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</div>
+						<div class="border-r border-gray-200"></div>
+						<div class="flex items-center">
+							<button class="flex items-center hover:bg-gray-100 text-gray-400 rounded px-1 py-1">
+								<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+									/>
+								</svg>
+								<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="text-right">
+						<button class="text-sm text-gray-600 font-semibold hover:bg-gray-100 rounded py-1 px-3">
+							Publish
+						</button>
+					</div>
+				</div>
+			</main>
 		</div>
 
-<!-- There a zindex issue here -->
-		<div class="bg-transparent w-14">
-			left menu
+		<!-- There a zindex issue here -->
+		<div class="bg-transparent w-14 flex flex-row items-start justify-center px-2 pt-5">
+			<div class="flex flex-col gap-y-1">
+				<button class="bg-gray-800 text-white font-bold rounded-full p-1 mb-5">
+					CO
+				</button>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400 transform rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+						/>
+					</svg>
+				</button>
+				<div class="border-t border-gray-200 -mx-3"></div>
+				<button class="hover:bg-gray-200 rounded p-1">
+					<svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+					</svg>
+				</button>
+			</div>
 		</div>
 		<!-- </div> -->
 	</div>
