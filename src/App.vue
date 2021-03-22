@@ -8,8 +8,10 @@
 				<div class="space-y-3">
 					<h1 class="text-4xl text-center">Welcome to my Tailwind Mini-Projects</h1>
 					<p class="text-gray-500">
-						I recently decided I've had enough of my lack of UI/CSS skills, so I dedicated some time to creating a few things and have learned quite a bit. I mainly focused on
-						layouts, effects, and responsiveness. I haven't progressed to adding color yet.
+						I recently decided I've had enough of my lack of UI/CSS skills, so I dedicated some time to creating a few things and have learned quite a bit. 
+					</p>
+					<p class="text-gray-500">
+						I focused on layouts, effects, and responsiveness. I haven't progressed to adding color yet.
 					</p>
 				</div>
 
@@ -43,7 +45,8 @@
 				Mini-Projects
 				<div>
 					<router-link to="/">Home</router-link> | <router-link to="/inbox">Inbox</router-link> | <router-link to="/descript">Descript</router-link> |
-					<router-link to="/Dropdown">Dropdown</router-link>
+					<router-link to="/Dropdown">Dropdown</router-link> |
+					<router-link to="/Keycaps">Keycaps</router-link>
 				</div>
 			</div>
 		</div>

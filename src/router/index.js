@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Inbox from "@/components/Inbox.vue";
 import Descript from "@/components/Descript.vue";
 import Dropdown from "@/components/Dropdown.vue";
+import Keycaps from "@/components/Keycaps.vue";
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     path: '/descript',
     name: 'Descript',
     component: Descript
+  },
+  {
+    path: '/keycaps',
+    name: 'Keycaps',
+    component: Keycaps
   },
   // {
   //   path: '/about',
